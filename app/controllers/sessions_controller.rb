@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
   private
   
   def login(email, password)
-    @user = User.find_by(email: :email)
+    @user = User.find_by(email: email)
     if @user && @user.authenticate(password)
       #ログイン成功
       session[:user_id] = @user.id
@@ -33,6 +33,5 @@ class SessionsController < ApplicationController
       return false
     end
   end
-  
-  
+
 end
