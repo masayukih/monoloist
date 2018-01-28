@@ -1,4 +1,4 @@
 class Ownership < ApplicationRecord
   belongs_to :user
-  belongs_to :ietm
+  belongs_to :item
 end
